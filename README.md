@@ -1,1 +1,1 @@
-# kindnessjournal
+# kindness_journal
