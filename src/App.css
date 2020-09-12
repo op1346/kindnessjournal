@@ -1,0 +1,74 @@
+a:hover {
+  background-color: #065c6f;
+}
+
+.header {
+  background: #64958f;
+  padding: 20px 0;
+  margin-bottom: 30px;
+}
+
+.header--logo {
+  color: #faf3dd;
+  font-size: 24px;
+  padding: 0 15px;
+  margin: 0;
+  display: inline-block;
+}
+
+.history {
+  color: #065c6f;
+  font-size: 20px;
+  padding: 0 15px;
+  margin: auto;
+  display: inline-block;
+  text-align: center;
+}
+
+.instructions {
+  color: #065c6f;
+  font-size: 20px;
+  padding: 0 15px;
+  margin: auto;
+  display: float;
+  text-align: center;
+}
+
+.entry-input {
+  display: float;
+}
+
+textarea {
+  font-family: Grandstander;
+  font-size: 20px;
+}
+
+.submit{
+  background-color: #065c6f;
+  color: #faf3dd;
+  border: none;
+}
+
+.submit:hover {
+  background-color: #64958f
+}
+
+.feed{
+
+}
+
+.footer{
+  background: #ffbb91;
+  padding: 20px 0;
+  margin-bottom: 30px;
+}
+
+.instagram {
+  color: #faf3dd;
+  align-content: center;
+}
+
+.twitter {
+  color: #faf3dd;
+  align-content: center;
+}
