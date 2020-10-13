@@ -57,11 +57,11 @@ textarea {
   background: #ffbb91;
   padding: 20px 0;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .instagram {
   color: #faf3dd;
-  align-content: center;
 }
 .instagram:hover {
   color: #065c6f;
@@ -69,7 +69,6 @@ textarea {
 
 .twitter {
   color: #faf3dd;
-  align-content: center;
 }
 
 .twitter:hover {

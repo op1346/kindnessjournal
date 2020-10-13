@@ -8,10 +8,10 @@ import {
 function Footer () {
   return (
     <div className="footer">
-      <a href="https://www.twitter.com/KindnessJrnl" className="twitter">
+      <a href="https://www.twitter.com/KindnessJrnl" target="_blank" className="twitter">
         <FontAwesomeIcon icon={faTwitter} size="2x" />
       </a>
-      <a href="https://www.instagram.com/the_kindness_journal" className="instagram">
+      <a href="https://www.instagram.com/the_kindness_journal" target="_blank" className="instagram">
         <FontAwesomeIcon icon={faInstagram} size="2x" />
       </a>
     </div>
