@@ -13,11 +13,11 @@ export default () => (
   <Router>
     <div>
 
-      <Container>
         <Header />
-        <Entries />
+        <Container>
+          <Entries />
+        </Container>
         <Footer />
-      </Container>
 
     </div>
   </Router>

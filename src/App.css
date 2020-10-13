@@ -1,7 +1,4 @@
-a:hover {
-  background-color: #065c6f;
-}
-
+/*HEADER*/
 .header {
   background: #64958f;
   padding: 20px 0;
@@ -16,6 +13,7 @@ a:hover {
   display: inline-block;
 }
 
+/*BODY*/
 .history {
   color: #065c6f;
   font-size: 20px;
@@ -34,6 +32,7 @@ a:hover {
   text-align: center;
 }
 
+/*INPUT*/
 .entry-input {
   display: float;
 }
@@ -53,10 +52,7 @@ textarea {
   background-color: #64958f
 }
 
-.feed{
-
-}
-
+/*FOOTER*/
 .footer{
   background: #ffbb91;
   padding: 20px 0;
@@ -67,8 +63,15 @@ textarea {
   color: #faf3dd;
   align-content: center;
 }
+.instagram:hover {
+  color: #065c6f;
+}
 
 .twitter {
   color: #faf3dd;
   align-content: center;
+}
+
+.twitter:hover {
+  color: #065c6f;
 }

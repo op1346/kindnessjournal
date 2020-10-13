@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
-
 import {
-  Button,
-  Form
+  Button
 } from 'react-bootstrap';
 import '../App.css';
+import 'jquery';
 
 class Entries extends Component {
-  state = {
-    entries: []
-  };
+  countChar() {
+    const textArea = document.getElementById('textArea');
+    const remainingChars = document.getElementById('remainingChars');
+    const max = 280;
+
+    textArea.addEventListener('input', () => {
+      const remaining = max - textArea.value.length;
+      remainingChars.textContent = `${remaining} characters remaining`;
+    });
+  }
 
   render() {
     return (
@@ -28,12 +34,7 @@ class Entries extends Component {
         </div>
 
         <div className="entry-input">
-          <Form>
-            <Form.Group controlId="exampleForm.ControlTextarea1">
-            <Form.Control as="textarea" rows="3" placeholder="Spread some kindness"/>
-            </Form.Group>
-            <Button variant="primary" size="lg" type="submit" className="submit" block>Submit</Button>
-          </Form>
+          <Button variant="primary" size="lg" type="submit" className="submit" block>Submit</Button>
         </div>
 
         <div className="feed">
