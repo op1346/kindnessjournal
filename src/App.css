@@ -1,12 +1,12 @@
 /*HEADER*/
 .header {
-  background: #64958f;
+  background: #00587a;
   padding: 20px 0;
   margin-bottom: 30px;
 }
 
 .header--logo {
-  color: #faf3dd;
+  color: #e7e7de;
   font-size: 24px;
   padding: 0 15px;
   margin: 0;
@@ -15,7 +15,7 @@
 
 /*BODY*/
 .history {
-  color: #065c6f;
+  color: #00587a;
   font-size: 20px;
   padding: 0 15px;
   margin: auto;
@@ -24,7 +24,7 @@
 }
 
 .instructions {
-  color: #065c6f;
+  color: #0f3057;
   font-size: 20px;
   padding: 0 15px;
   margin: auto;
@@ -34,43 +34,40 @@
 
 /*INPUT*/
 .entry-input {
-  display: float;
+  display: flex;
+  justify-content: center;
 }
 
-textarea {
-  font-family: Grandstander;
-  font-size: 20px;
-}
-
-.submit{
+#submit{
   background-color: #065c6f;
-  color: #faf3dd;
+  color: #e7e7de;
   border: none;
+  font-family: 'Grandstander';
 }
 
-.submit:hover {
-  background-color: #64958f
+#submit:hover {
+  background-color: #00587a;
 }
 
 /*FOOTER*/
 .footer{
-  background: #ffbb91;
+  background: #0f3057;
   padding: 20px 0;
   margin-bottom: 30px;
   text-align: center;
 }
 
 .instagram {
-  color: #faf3dd;
+  color: #e7e7de;
 }
 .instagram:hover {
-  color: #065c6f;
+  color: #00587a;
 }
 
 .twitter {
-  color: #faf3dd;
+  color: #e7e7de;
 }
 
 .twitter:hover {
-  color: #065c6f;
+  color: #00587a;
 }

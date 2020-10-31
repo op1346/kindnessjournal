@@ -1,21 +1,9 @@
 import React, { Component } from 'react';
-import {
-  Button
-} from 'react-bootstrap';
 import '../App.css';
 import 'jquery';
+import { Button, TextField } from '@material-ui/core';
 
 class Entries extends Component {
-  countChar() {
-    const textArea = document.getElementById('textArea');
-    const remainingChars = document.getElementById('remainingChars');
-    const max = 280;
-
-    textArea.addEventListener('input', () => {
-      const remaining = max - textArea.value.length;
-      remainingChars.textContent = `${remaining} characters remaining`;
-    });
-  }
 
   render() {
     return (
@@ -34,7 +22,15 @@ class Entries extends Component {
         </div>
 
         <div className="entry-input">
-          <Button variant="primary" size="lg" type="submit" className="submit" block>Submit</Button>
+          <TextField
+          id="outlined-multiline"
+          multiline
+          rows={4}
+          placeholder="Share some Kindness"
+          variant="outlined"
+          onfocus ="this.value=''"
+          />
+          <Button variant="outlined" id="submit">Submit</Button>
         </div>
 
         <div className="feed">
