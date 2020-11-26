@@ -3,7 +3,15 @@ import '../App.css';
 import 'jquery';
 import { Button, TextField } from '@material-ui/core';
 
-class Entries extends Component {
+export default class Entries extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+
+    }
+  }
 
   render() {
     return (
@@ -40,5 +48,3 @@ class Entries extends Component {
     );
   }
 }
-
-export default Entries;
