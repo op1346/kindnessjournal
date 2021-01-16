@@ -5,6 +5,7 @@ import {
 import './App.css';
 
 import Header from './components/Header';
+import SubmitEntry from './components/SubmitEntry';
 import Entries from './components/Entries';
 import Footer from './components/Footer';
 
@@ -13,6 +14,7 @@ export default () => (
     <div>
 
         <Header />
+        <SubmitEntry />
         <Entries />
         <Footer />
 

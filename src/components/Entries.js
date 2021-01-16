@@ -2,15 +2,69 @@ import React, { Component } from 'react';
 import '../App.css';
 import 'jquery';
 import { Button, TextField } from '@material-ui/core';
+import axios from 'axios';
 
 export default class Entries extends Component {
 
   constructor(props) {
     super(props);
 
-    this.state = {
+    this.onChangeUsername = this.onChangeUsername.bind(this);
+    this.onChangeEntry = this.onChangeEntry.bind(this);
+    this.onChangeDate = this.onChangeDate.bind(this);
 
+    this.state = {
+      username: '',
+      entry: '',
+      date: new Date()
     }
+  }
+
+  componentDidMount() {
+
+  }
+
+  onChangeUsername(e) {
+    this.setState({
+      username: e.target.value
+    });
+  }
+
+  onChangeEntry(e) {
+    this.setState({
+      entry: e.target.value
+    });
+  }
+
+  onChangeDate(date) {
+    this.setState({
+      date: date
+    });
+  }
+
+  onSubmit(e) {
+    e.preventDefault();
+
+    const entry = {
+      entry: this.state.entry
+    };
+
+    console.log(entry);
+
+    axios.post('http://localhost:5000/entries/add', entry)
+      .then(response => {
+        if(response.data.length > 0) {
+          this.setState({
+            entries: response.data
+          });
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+
+
+    window.location = '/';
   }
 
   render() {
@@ -29,17 +83,18 @@ export default class Entries extends Component {
             <p>3. Smile, be happy!</p>
         </div>
 
-        <div className="entry-input">
-          <TextField
-          id="outlined-multiline"
-          multiline
-          rows={4}
-          placeholder="Share some Kindness"
-          variant="outlined"
-          onfocus ="this.value=''"
-          />
-          <Button variant="outlined" id="submit">Submit</Button>
-        </div>
+        <form onSubmit={this.onSubmit}/>
+          <div className="entry">
+            <TextField
+            id="outlined-multiline"
+            multiline
+            rows={4}
+            placeholder="Share some Kindness"
+            variant="outlined"
+            onfocus ="this.value=''"
+            />
+            <Button variant="outlined" id="submit">Submit</Button>
+          </div>
 
         <div className="feed">
 
