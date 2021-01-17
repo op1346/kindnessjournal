@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   BrowserRouter as Router,
-  NavLink
 } from 'react-router-dom';
 
 import Header from './components/Header';
@@ -11,7 +10,6 @@ import Intro from './components/Intro';
 import Footer from './components/Footer';
 
 import PrivateRoute from './Utils/PrivateRoute';
-import PublicRoute from './Utils/PublicRoute';
 
 function App() {
   return (
@@ -22,7 +20,7 @@ function App() {
         </div>
         <div className="content">
           <Intro />
-          <SubmitEntry />
+          <PrivateRoute path='/login' component={SubmitEntry} />
           <Feed />
         </div>
         <div>
