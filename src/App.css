@@ -7,15 +7,27 @@
 
 .header--logo {
   color: #e7e7de;
-  font-size: 24px;
+  font-size: 40px;
+  font-weight: 900;
   padding: 0 15px;
   margin: 0;
-  display: inline-block;
+  display: inline;
+  text-decoration: none;
 }
 
-.welcome {
-  display: inline-block;
-  text-align: right;
+.header--logo:hover {
+  color: #0f3057;
+  text-decoration: none;
+}
+
+.user {
+  color: #e7e7de;
+  float: right;
+  text-decoration: none;
+}
+
+.user:hover {
+  color: #0f3057;
 }
 
 /*BODY*/
@@ -70,6 +82,7 @@
 .instagram {
   color: #e7e7de;
 }
+
 .instagram:hover {
   color: #00587a;
 }
