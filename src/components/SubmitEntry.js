@@ -1,9 +1,11 @@
-// import React, { Component } from 'react';
-// import '../App.css';
-// import 'jquery';
-// import { Button, TextField } from '@material-ui/core';
-// import axios from 'axios';
+import React from 'react';
 
-// export default class SubmitEntry extends Component {
+function SubmitEntry() {
+ return (
+   <div>
+     Submit Entry
+   </div>
+ )
+}
 
-// }
+export default SubmitEntry;

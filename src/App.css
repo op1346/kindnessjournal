@@ -13,6 +13,11 @@
   display: inline-block;
 }
 
+.welcome {
+  display: inline-block;
+  text-align: right;
+}
+
 /*BODY*/
 .history {
   color: #00587a;
