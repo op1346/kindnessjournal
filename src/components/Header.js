@@ -1,5 +1,6 @@
 import React from 'react';
-import { getUser, removeUserSession } from './Utils/Common';
+import { getUser, removeUserSession } from '../Utils/Common';
+import Button from '@material-ui/core/Button';
 
 function Header(props) {
   const user = getUser();
@@ -10,13 +11,15 @@ function Header(props) {
   }
 
   return (
-    <div className="header">
-      <div className="bounds">
-        <h1 className="header--logo">The Kindness Journal</h1>
-      </div>
-      <div>
-        Welcome!<br /><br />
-        <input type="button" onClick={handleLogout} value="Logout" />
+    <div>
+      <div className="header">
+        <div className="bounds">
+          <h1 className="header--logo">The Kindness Journal</h1>
+        </div>
+        <div className="welcome">
+          Welcome!<br /><br />
+          <Button variant="contained" onClick={handleLogout}>Logout</Button>
+        </div>
       </div>
     </div>
   );

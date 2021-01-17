@@ -32,6 +32,11 @@
   text-align: center;
 }
 
+.login {
+  display: float;
+  text-align: center;
+}
+
 /*INPUT*/
 .entry-input {
   display: flex;

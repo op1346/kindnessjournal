@@ -12,19 +12,27 @@ import Login from './components/Login';
 import SubmitEntry from './components/SubmitEntry';
 import Entries from './components/Entries';
 import Footer from './components/Footer';
+import Signup from './components/SignUp';
 
 import PrivateRoute from './Utils/PrivateRoute';
 import PublicRoute from './Utils/PublicRoute';
 
-export default () => (
-  <Router>
-    <div>
+function App() {
+  return (
+    <div className="App">
+      <Router>
+        <div>
+          <Header />
+        </div>
+        <div className="content">
+          <Switch>
 
-        <Header />
-        <SubmitEntry />
-        <Entries />
-        <Footer />
-
+            <Route path="/login" component={Login} />
+          </Switch>
+        </div>
+      </Router>
     </div>
-  </Router>
-);
+  )
+}
+
+export default App;
