@@ -1,32 +1,28 @@
 import React from 'react';
 import {
   BrowserRouter as Router,
+  Switch,
+  Route
 } from 'react-router-dom';
 
 // import components
 import Header from './components/Header';
-import SubmitEntry from './components/SubmitEntry';
-import Feed from './components/Feed';
-import Intro from './components/Intro';
+import Main from './components/Main';
+import Login from './components/Login';
 import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <div>
-          <Header />
-        </div>
-        <div className="content">
-          <Intro />
-          <SubmitEntry />
-          <Feed />
-        </div>
-        <div>
-          <Footer />
-        </div>
-      </Router>
-    </div>
+    <Router>
+      <Route path='/' component={Header}/>
+
+      <Switch>
+        <Route path="/login" component={Login}/>
+        <Route path="/" component={Main}/>
+      </Switch>
+
+      <Route path='/' component={Footer}/>
+    </Router>
   )
 }
 
