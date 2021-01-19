@@ -1,12 +1,12 @@
 import React from 'react';
-import { refreshTokenSetup } from '../Utils/refreshToken';
+import { refreshTokenSetup } from '../../../Utils/refreshToken';
 import { useGoogleLogin } from 'react-google-login';
 
 import Button from '@material-ui/core/Button';
 
-const clientId = "YOUR_CLIENT_ID.apps.googleusercontent.com";
+const clientId = ;
 
-function GoogleSignIn(props) {
+function GoogleSignIn() {
 
   const onSuccess = (res) => {
     console.log('Login Success: currentUser', res.profileObj);

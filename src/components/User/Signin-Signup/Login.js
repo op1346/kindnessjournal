@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { setUserSession } from '../Utils/Common';
-import {
-  BrowserRouter as Router,
-} from 'react-router-dom';
+import { setUserSession } from '../../../Utils/Common';
+import { NavLink } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
-import SignUp from '../components/SignUp';
-import GoogleSignIn from '../components/GoogleSignIn';
+import GoogleSignIn from './GoogleSignIn';
 
 function Login(props) {
   const email = useFormInput('');
@@ -41,6 +38,13 @@ function Login(props) {
       </div>
       {error && <> <small style={{ color: 'red' }}>{error}</small><br /></>}<br />
       <Button variant="contained" value={loading ? 'Loading...': 'Login'} onClick={handleLogin} disabled={loading}>Log in</Button><br />
+      <GoogleSignIn />
+      <div className="password-reset">
+        <NavLink to='/password-reset'>Forgot your password?</NavLink>
+      </div>
+      <div className="no-account">
+        Don't have an account? <NavLink to='/signup'>Register Now</NavLink>
+      </div>
     </div>
   );
 }

@@ -8,22 +8,18 @@
 .header--logo {
   color: #e7e7de;
   font-size: 40px;
-  font-weight: 900;
   padding: 0 15px;
   margin: 0;
   display: inline;
-  text-decoration: none;
 }
 
 .header--logo:hover {
   color: #0f3057;
-  text-decoration: none;
 }
 
 .user {
   color: #e7e7de;
   float: right;
-  text-decoration: none;
 }
 
 .user:hover {
