@@ -4,14 +4,15 @@ import { setUserSession } from '../../../Utils/Common';
 import { Link } from 'react-router-dom';
 import { useGoogleLogin } from 'react-google-login';
 import { refreshTokenSetup } from '../../../Utils/refreshToken';
+import { useSelector } from 'react-redux';
 import Button from '@material-ui/core/Button';
-
 
 const clientId = "YOUR_CLIENT_ID.apps.googleusercontent.com";
 
 function SignInSignup(props) {
   const email = useFormInput('');
   const password = useFormInput('');
+  const loggedIn = useSelector(state => state.LoggedIn);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
