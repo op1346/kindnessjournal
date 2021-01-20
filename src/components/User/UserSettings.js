@@ -2,7 +2,10 @@ import React from 'react';
 
 function UserSettings() {
   return (
-    UserSettings
+    <div>
+      Your Posts
+      Favorite Posts
+    </div>
   )
 }
 

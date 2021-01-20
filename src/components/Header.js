@@ -9,7 +9,7 @@ function Header(props) {
         <NavLink to='/'>The Kindness Journal</NavLink>
       </div>
       <div className="user">
-        <NavLink to='/login'>
+        <NavLink to='/signinsignup'>
           <AccountCircleOutlinedIcon style={{ fontSize: 40}}/>
         </NavLink>
       </div>

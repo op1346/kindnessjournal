@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { setUserSession } from '../../../Utils/Common';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { useGoogleLogin } from 'react-google-login';
+import { refreshTokenSetup } from '../../../Utils/refreshToken';
 import Button from '@material-ui/core/Button';
-import GoogleSignIn from './GoogleSignIn';
 
-function Login(props) {
+
+const clientId = "YOUR_CLIENT_ID.apps.googleusercontent.com";
+
+function SignInSignup(props) {
   const email = useFormInput('');
   const password = useFormInput('');
   const [error, setError] = useState(null);
@@ -25,6 +29,23 @@ function Login(props) {
     });
   }
 
+  const onSuccess = (res) => {
+    console.log('Login Success: currentUser', res.profileObj);
+    refreshTokenSetup(res);
+  };
+
+  const onFailure = (res) => {
+    console.log('Login failed: res:', res);
+  }
+
+  const { signIn } = useGoogleLogin({
+    onSuccess,
+    onFailure,
+    clientId,
+    isSignedIn: true,
+    accessType: 'offline',
+  });
+
   return (
     <div className="login">
       Login<br /><br />
@@ -38,12 +59,14 @@ function Login(props) {
       </div>
       {error && <> <small style={{ color: 'red' }}>{error}</small><br /></>}<br />
       <Button variant="contained" value={loading ? 'Loading...': 'Login'} onClick={handleLogin} disabled={loading}>Log in</Button><br />
-      <GoogleSignIn />
+      <Button variant="contained" onClick={signIn}>
+      <span className="buttonText">Sign in with Google</span>
+    </Button>
       <div className="password-reset">
-        <NavLink to='/password-reset'>Forgot your password?</NavLink>
+        <Link to='/password-reset'>Forgot your password?</Link>
       </div>
       <div className="no-account">
-        Don't have an account? <NavLink to='/signup'>Register Now</NavLink>
+        Don't have an account? <Link to='/signup'>Register Now</Link>
       </div>
     </div>
   );
@@ -62,4 +85,4 @@ const useFormInput = initialValue => {
   }
 }
 
-export default Login;
+export default SignInSignup;

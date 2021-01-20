@@ -10,8 +10,7 @@ import "./App.css"
 // import components
 import Header from './components/Header';
 import Main from './components/Main';
-import Login from './components/User/Signin-Signup/Login';
-import SignUp from './components/User/Signin-Signup/SignUp';
+import SignInSignUp from './components/User/Signin-Signup/SignInSignUp';
 import PasswordReset from './components/User/Signin-Signup/PasswordReset';
 import UserSettings from './components/User/UserSettings';
 import Footer from './components/Footer';
@@ -22,8 +21,7 @@ function App() {
       <Route path='/' component={Header}/>
 
       <Switch>
-        <Route path="/login" component={Login}/>
-        <Route path='/signup' component={SignUp}/>
+        <Route path="/signinsignup" component={SignInSignUp}/>
         <Route path='/password-reset' component={PasswordReset}/>
         <Route path='/settings' component={UserSettings}/>
         <Route path="/" component={Main}/>

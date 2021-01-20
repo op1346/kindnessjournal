@@ -4,7 +4,7 @@ import { useGoogleLogin } from 'react-google-login';
 
 import Button from '@material-ui/core/Button';
 
-const clientId = ;
+const clientId = "YOUR_CLIENT_ID.apps.googleusercontent.com";
 
 function GoogleSignIn() {
 
