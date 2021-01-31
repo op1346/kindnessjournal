@@ -2,3 +2,5 @@
 backend/.env
 backend/node_modules
 .env
+/kindnessjournal/bin
+/kindnessjournal/lib
